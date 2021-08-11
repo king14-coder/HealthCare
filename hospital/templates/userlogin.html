@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <title>Title</title>
+
+</head>
+{%load static%}
+<body>
+<nav class="navbar navbar-expand-lg navbar-light " style="background: #00F260; background:-webkit-linear-gradient(to right, #0575E6, #00F260);background: linear-gradient(to right, #0575E6, #00F260);">
+  <div class="container-fluid">
+    <a href="/#/"><img src="{%static 'hospital.png'%}" alt="Paris" width="37" height="37"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"style="margin-left:900px;color:black;font-size: 22px;" href="/#/">Home</a>
+        </li>
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" style="width: 400px; background-image:url({%static 'login.jpg'%});height:280px;background-color:orange; margin-top:150px;padding:30px">
+    <h1 style="color:black">login</h1>
+<form method="post" action="/user/authenticate/">
+    {% csrf_token %}
+<input type="text" class="form-control"name="username" placeholder="username" style="margin-bottom: 10px">
+<input type="password" class="form-control" name="password" placeholder="password" style="margin-bottom: 10px">
+<input type="submit" class="btn btn-success" style="display:block;margin:auto"name="">
+</form>
+    {%for message in messages%}
+    <p style ="text-align: center">{{message}}</p>
+{%endfor%}
+</div>
+
+</body>
+
+</html>

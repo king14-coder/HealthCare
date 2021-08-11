@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <title>Title</title>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light " style="background: #00F260; background:-webkit-linear-gradient(to right, #0575E6, #00F260);background: linear-gradient(to right, #0575E6, #00F260);">
+  <div class="container-fluid">
+    <a href="/admin/"><img src="{%static 'hospital.png'%}" alt="Paris" width="37" height="37"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"style="margin-left:1250px;color:black;font-size: 22px;" href="/#/">Home</a>
+        </li>
+          <li class="nav-item">
+          <a class="btn btn-danger" style="margin-left: 20px;font-size: 22px;"  href="/loginuser/">login</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<li>
+
+<div class="container-fluid" style="position:relative;height:900px;background-size:cover;background-image:url({%static 'mainhomepage.jpg'%})">
+
+    <div style="position:center; top: 50px; right: 20px; width:500px; height:350px;  background-color:orange; padding: 40px" class="container">
+        <h1 style="text-align: center; color:white">Sign Up!</h1>
+
+        <form method="post" action="/signupuser/">
+            {%csrf_token%}
+            <input class="form-control" placeholder="username" type="text" name="username" style="margin-bottom: 10px">
+            <input class="form-control" placeholder="password" type="password" name="password" style="margin-bottom: 10px">
+            <input class= "form-control" placeholder="phoneno" type="text" name="phoneno" maxlength="10" title="Enter 10 digit number" style="margin-bottom: 10px"pattern="[1-9]{1}[0-9]{9}">
+            <input style="display: block; margin: auto;margin-top: 20px" class= "btn btn-success" type="submit" name="">
+        </form>
+        {%for message in messages %}
+<p style="text-align: center">{{message}}</p>
+{%endfor%}
+    </div>
+</div>
+
+{%block content%}
+{%endblock%}
+</body>
+
+</html>

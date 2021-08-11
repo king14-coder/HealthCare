@@ -1,0 +1,20 @@
+{%extends 'base.html' %}
+{% load static %}
+{%block content%}
+
+<section class="row">
+{%for i in labtest%}
+
+<div class="card-block text-center" style="width: 18rem;margin-top:20px">
+  <img class="card-img-top" src='/media/{{i.image}}' style="width:150px; height:180px" alt="NHI AYA">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.description}}</p>
+      <p class="card-text">Charges - {{ i.price }}</p>
+    <a href="#" class="btn btn-primary">Book an appointment</a>
+  </div>
+</div>
+
+{%endfor%}
+  </section>
+{%endblock%}

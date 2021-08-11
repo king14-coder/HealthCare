@@ -1,0 +1,24 @@
+{%extends 'base.html' %}
+{% load static %}
+{%block content%}
+
+<div class="container-fluid" style="position:relative;height:800px;margin-bottom:10px;background-size:cover;background-image:url({%static '3.jpg'%})">
+<div class="container" style="position:absolute;margin-left:50px; margin-top:100px;">
+   <h1> Making Health</h1><h1>Care Better Together</h1><br>
+    <h4>  Healthcare has a robust presence across the healthcare</h4><h4> ecosystem.
+     From routine wellness & preventive health care to</h4>
+    <h4>innovative life-saving treatments and diagnostic services</h4>
+
+</div>
+
+</div>
+<iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map"  width="100%" height="600px"></iframe>
+ <form class="d-flex">
+        <input class="form-control me-2" type="search" size="10px" placeholder="Location for near by hospital" aria-label="Search">
+        <button class="btn btn-outline-success" style="margin-left:50px; margin-right:850px;margin-bottom:10px" type="submit">Search</button>
+      </form>
+<div class="container-fluid" style="background-color:#f18973;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235526.90924403188!2d75.7237605292052!3d22.72422843169994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1625762729339!5m2!1sen!2sin" width="1000" height="800" style="border:10;margin-left:250px" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+{%endblock%}

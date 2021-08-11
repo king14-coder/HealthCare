@@ -1,0 +1,31 @@
+{%extends 'base.html' %}
+
+{%block content%}
+
+<form  action="{%url 'result'%}">
+    {%csrf_token%}
+
+  radius_mean:  <input type="text" required name="radius_mean"><br><br>
+  texture_mean:  <input type="text" required name="texture_mean"><br><br>
+  smoothness_mean:  <input type="text" required name="smoothness_mean"><br><br>
+  compactness_mean:  <input type="text" required name="compactness_mean"><br><br>
+  symmetry_mean:  <input type="text" required name="symmetry_mean"><br><br>
+  fractal_dimension_mean:  <input type="text" required name="fractal_dimension_mean"><br><br>
+  radius_se:  <input type="text" required name="radius_se"><br><br>
+  texture_se:  <input type="text" required name="texture_se"><br><br>
+  smoothness_se:  <input type="text" required name="smoothness_se"><br><br>
+  compactness_se:  <input type="text" required name="compactness_se"><br><br>
+  symmetry_se:  <input type="text" required name="symmetry_se"><br><br>
+  fractal_dimension_se:  <input type="text" required name="fractal_dimension_se"><br><br>
+
+    <input type="submit" name="" value="submit">
+</form>
+<h6># o1 =[1.97259859e-01 ,1.71303831e-01 ,1.96489473e-01,-5.80766382e-01,-8.12834215e-01,-5.04178488e-01 ,2.22907687e-01,-4.79828115e-05,-4.29392231e-01,-7.31145526e-01,-7.78476227e-01,-5.98401236e-01]
+# o2 =[[-0.06559225 ,-1.2897233 , -0.28528602 ,-0.75725254, -0.78992993 ,-0.51777378 ,-0.62093975 ,-0.91332148 ,-0.86268515,-0.90641175,0.16788041,-0.69367014]]
+</h6>
+{%endblock%}
+
+<!--['radius_mean', 'texture_mean', 'smoothness_mean', 'compactness_mean',-->
+<!--       'symmetry_mean', 'fractal_dimension_mean', 'radius_se', 'texture_se',-->
+<!--       'smoothness_se', 'compactness_se', 'symmetry_se',-->
+<!--       'fractal_dimension_se']-->

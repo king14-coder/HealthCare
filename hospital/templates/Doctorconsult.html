@@ -1,0 +1,23 @@
+{%extends 'base.html' %}
+{% load static %}
+{%block content%}
+
+
+
+
+<section class="row">
+{%for doctors in doctor%}
+
+<div class="card-block text-center" style="width: 18rem;margin-top:20px">
+  <img class="card-img-top" src='/media/{{doctors.image}}' style="width:250px; height:250px" alt="NHI AYA">
+  <div class="card-body">
+    <h5 class="card-title">{{doctors.name}}</h5>
+    <p class="card-text">{{doctors.description}}</p>
+      <p class="card-text">Charges - {{ doctors.price }}</p>
+    <a href="#" class="btn btn-primary">Book an appointment</a>
+  </div>
+</div>
+
+{%endfor%}
+  </section>
+{%endblock%}
